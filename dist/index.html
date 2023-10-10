@@ -18,8 +18,34 @@
         transition: 150ms;
       }
     </style>
-<script defer src="main7d81f057c567ba77aa3b.js"></script></head>
+<script defer src="mainacbeef60ce2829ea5fb9.js"></script></head>
 <body>
 
+    <div class="contentWRAP">
+      <img src="" alt="" class="logoIMG">
+      <form method="post" action="https://httpbin.org/post">
+        <h2 class="formTITLE">Erkunden und Verbinden</h2>
+        <p>Registriere dich bei der größten Plattfrom Heidelbergs</p>
+        <input type="hidden" name="dateSubmitted" value="">
+        <fieldset>
+          <legend></legend>
+          <div class="inputBLOCK">
+            <label for="fullname">Ihr vollständiger Name <span aria-label="required">*</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="Alex Müller" required pattern="[a-zA-Z]{2,}.*">
+            <p class="inputALERT name"></p>
+          </div>
+          <div class="inputBLOCK">
+            <label for="email">Ihre E-Mail Adresse <span aria-label="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Alex Müller" required>
+            <p class="inputALERT email"></p>
+          </div>
+          <div class="inputBLOCK">
+            <label for="password">Passwort ausdenken <span aria-label="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Alex Müller" required>
+            <p class="inputALERT password"></p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
 </body>
     </html>

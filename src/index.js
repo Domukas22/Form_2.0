@@ -1,13 +1,17 @@
-import returnText from "./logic/function";
 import "./styles/reset.css";
 import "./styles/main.css";
+import { GETdate, TOGGLEsubmitBtn } from "./logic/function";
 
-function print(textSTRING) {
-  const text = document.createElement("h2");
-  text.innerHTML = textSTRING;
-  document.body.appendChild(text);
-}
+const inputs = document.querySelectorAll("input");
+const form = document.querySelector("form");
+const submitBTN = document.querySelector('button[type="submit"]');
+const hiddenTimeINPUT = document.querySelector("input[type='hidden']");
 
-print(returnText());
-
-print("hww");
+inputs.forEach((i) =>
+  i.addEventListener("input", () => {
+    TOGGLEsubmitBtn(submitBTN);
+  }),
+);
+form.addEventListener("submit", () => {
+  hiddenTimeINPUT.setAttribute("value", GETdate());
+});

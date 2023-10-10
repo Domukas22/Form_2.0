@@ -37,7 +37,8 @@
   --bgFORM: #464646;
   --orange: #f67c00;
   --orangeHOVER: #d66c01;
-  --greenSUCCESS: rgb(98, 255, 98);
+  --green: #55CA55;
+  --red: rgb(255, 125, 125);
 
   --white_003: rgba(255, 255, 255, 0.03);
   --white_005: rgba(255, 255, 255, 0.05);
@@ -60,8 +61,107 @@ body {
   justify-content: center;
   align-items: center;
 }
-h2 {
-  padding: 2rem 4rem;
-  border: 1px solid grey;
-  margin: 1rem;
+
+
+
+.contentWRAP {
+  position: relative;
+}
+form {
+  width: 40rem;  
+  background-color: var(--bgFORM);
+  position: relative;
+
+  padding: 2rem;
+  border: 1px solid var(--white_003);
+  border-radius: 0.8rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.inputBLOCK {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+
+label, .radioLEGEND, span[aria-label="required"] {
+  margin-bottom: 1rem;
+  color: var(--white_05);
+  font-weight: 300;
+}
+.inputSUBWRAP {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.inputSUBWRAP > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  
+  position: absolute;
+  right: 1.2rem;
+  opacity: 0%;
+}
+svg > path {
+  stroke: var(--green);
+} 
+input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+
+  background-color: var(--white_005);
+  border: 1px solid var(--white_005);
+  resize: none;
+  border-radius: 0.5rem;
+
+  position: relative;
+  z-index: 1;
+}
+input:focus  {
+  border: 1px solid var(--white_05);
+}
+input:valid {
+  border: 1px solid var(--green);
+}
+input:valid + svg {
+  opacity: 100%;
+}
+input:focus:invalid {
+  border: 1px solid var(--red);
+} 
+
+legend {
+  margin-bottom: 3rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+.inputALERT {
+  margin-top: 1.2rem;
+  color: var(--red);
+  display: none;
+}
+
+button {
+  height: 5rem;
+  width: 100%;
+  margin-top: 3.6rem;
+
+  font-weight: 600;
+  color: var(--white_03);
+  background-color: #4e4e4e;
+
+  position: relative;
+  z-index: 2;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+button.active {
+  color: white;
+  background-color: var(--orange);
+}
+button.active:hover {
+  background-color: var(--orangeHOVER);
 }

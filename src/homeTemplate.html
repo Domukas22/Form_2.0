@@ -21,5 +21,46 @@
 </head>
 <body>
 
+    <div class="contentWRAP">
+      <img src="" alt="" class="logoIMG">
+      <form method="post" action="https://httpbin.org/post">
+        <input type="hidden" name="dateSubmitted" value="">
+        <fieldset>
+          <legend>Regestriere dich bei Localmore!</legend>
+          <div class="inputBLOCK">
+            <label for="fullname">Ihr vollständiger Name <span aria-label="required">*</span></label>
+            <div class="inputSUBWRAP">
+              <input type="text" id="fullname" name="fullname" placeholder="Alex Müller" required pattern="[a-zA-Z]{2,}.*" autocomplete>
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                <path d="M1 4.3L3.15625 7L7.6 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="inputALERT name"></p>
+          </div>
+          <div class="inputBLOCK">
+            <label for="email">Ihre E-Mail Adresse <span aria-label="required">*</span></label>
+            <div class="inputSUBWRAP">
+              <input type="email" id="email" name="email" placeholder="Alex Müller" required autocomplete>
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                <path d="M1 4.3L3.15625 7L7.6 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="inputALERT email"></p>
+          </div>
+          <div class="inputBLOCK">
+            <label for="password">Passwort ausdenken <span aria-label="required">*</span></label>
+            <div class="inputSUBWRAP">
+              <input type="password" id="password" name="password" required autocomplete>
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="8" viewBox="0 0 9 8" fill="none">
+                <path d="M1 4.3L3.15625 7L7.6 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <p class="inputALERT password">This is an alert</p>
+          </div>
+          <button type="submit">Registrieren</button>
+        </fieldset>
+      </form>
+    </div>
+    
 </body>
     </html>
