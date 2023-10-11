@@ -18,34 +18,56 @@
         transition: 150ms;
       }
     </style>
-<script defer src="mainacbeef60ce2829ea5fb9.js"></script></head>
+<script defer src="maineeb4a90f7482032241e3.js"></script></head>
 <body>
 
     <div class="contentWRAP">
       <img src="" alt="" class="logoIMG">
       <form method="post" action="https://httpbin.org/post">
-        <h2 class="formTITLE">Erkunden und Verbinden</h2>
-        <p>Registriere dich bei der größten Plattfrom Heidelbergs</p>
         <input type="hidden" name="dateSubmitted" value="">
         <fieldset>
-          <legend></legend>
+          <legend>Sign up to Localmore!</legend>
           <div class="inputBLOCK">
-            <label for="fullname">Ihr vollständiger Name <span aria-label="required">*</span></label>
-            <input type="text" id="fullname" name="fullname" placeholder="Alex Müller" required pattern="[a-zA-Z]{2,}.*">
-            <p class="inputALERT name"></p>
+            <label for="fullname">Your (real) name <span aria-hidden='true'>*</span></label>
+            <div class="inputSUBWRAP">
+              <input label="Your message" type="text" id="fullname" name="fullname" placeholder="John Doe" required pattern="[a-zA-Z]{2,}.*" autocomplete>
+            </div>
+            <p class="inputALERT name" aria-live="assertive">⚠️️ Uh-oh, we can not read your mind just yet.</p>
           </div>
           <div class="inputBLOCK">
-            <label for="email">Ihre E-Mail Adresse <span aria-label="required">*</span></label>
-            <input type="email" id="email" name="email" placeholder="Alex Müller" required>
-            <p class="inputALERT email"></p>
+            <label for="email">Your E-Mail <span aria-hidden="true">*</span></label>
+            <div class="inputSUBWRAP">
+              <input type="email" id="email" name="email" required placeholder="johndoe@gmail.com" autocomplete>
+              
+            </div>
+            <p class="inputALERT email" aria-live="assertive">⚠️️ Uh-oh, is your email might be on vacation.</p>
           </div>
           <div class="inputBLOCK">
-            <label for="password">Passwort ausdenken <span aria-label="required">*</span></label>
-            <input type="password" id="password" name="password" placeholder="Alex Müller" required>
-            <p class="inputALERT password"></p>
+            <label for="password">Passwort ausdenken <span aria-hidden='true'>*</label>
+            <div class="inputSUBWRAP">
+              <input type="password" id="password" name="password" required autocomplete>
+              
+            </div>
+            <p class="inputALERT email" aria-live="assertive">⚠️️ Uh-oh, your password is playing hide and seek.</p>
           </div>
+          <button type="submit">Registrieren</button>
         </fieldset>
       </form>
     </div>
+
+
+<label for="address">Your address</label>
+<input id="address" type="text" aria-describedby="addressError addressHint"/>
+<p id="addressError">Address cannot be empty.</p>
+<p id="addressHint">Remember to include the door and apartment.</p>
+
+<input id="days" type="text" class="field-input" aria-describedby="hiddenPreDESC" />
+<span class="field-hint">
+  <span id="hiddenPreDESC" hidden>Short intro text</span>
+  <span>Longer text</span>
+  <ul>...</ul>
+  <span>...</span>
+</span>
+
 </body>
     </html>

@@ -1,19 +1,3 @@
-function AREinputsValid() {
-  const inputs = [...document.querySelectorAll("input")].filter(
-    (i) => i.getAttribute("type") !== "hidden",
-  );
-  return [...inputs].every((i) => i.checkValidity() === true);
-}
-
-export function TOGGLEsubmitBtn(btn) {
-  const SHOULDbeActive = AREinputsValid();
-  if (!SHOULDbeActive) {
-    btn.classList.remove("active");
-    return;
-  }
-  btn.classList.add("active");
-}
-
 export function GETdate() {
   const months = [
     "Januar",
