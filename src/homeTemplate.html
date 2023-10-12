@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <style>
       html {
         font-size: 62.5%;
@@ -23,37 +24,34 @@
 
     <div class="contentWRAP">
       <img src="" alt="" class="logoIMG">
-      <form method="post" action="https://httpbin.org/post" novalidate>
+      <form method="post" action="https://httpbin.org/post" novalidate autocomplete="on">
         <input type="hidden" name="dateSubmitted" value="">
         <fieldset>
           <legend>Sign up to Localmore!</legend>
           <div class="inputBLOCK">
             <label for="fullname">Your (real) name <span aria-hidden='true'>*</span></label>
             <div class="inputSUBWRAP">
-              <input label="Your (real) name" type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+              <input label="Your (real) name" type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name">
             </div>
             <p class="inputALERT name" aria-live="assertive">⚠️️ Error</p>
           </div>
           <div class="inputBLOCK">
             <label for="email">Your E-Mail <span aria-hidden="true">*</span></label>
             <div class="inputSUBWRAP">
-              <input label="Your E-Mail" type="email" id="email" name="email" required placeholder="johndoe@gmail.com">
+              <input label="Your E-Mail" type="email" id="email" name="email" required placeholder="johndoe@gmail.com" autocomplete="email">
             </div>
             <p class="inputALERT email" aria-live="assertive">⚠️️ Error</p>
           </div>
           <div class="inputBLOCK">
             <label for="password">Create a new password <span aria-hidden='true'>*</label>
             <div class="inputSUBWRAP">
-              <input label="Create a new password" type="password" id="password" name="password" required pattern="[a-zA-Z]{4,}.*">
+              <input label="Create a new password" type="password" id="password" name="password" required autocomplete="new-password">
             </div>
-            <p class="inputALERT password" aria-live="assertive">⚠️️ Error</p>
+            <p class="inputALERT password animate__animated" aria-live="assertive">⚠️️ Error</p>
           </div>
           <button type="submit">Submit</button>
         </fieldset>
       </form>
     </div>
-    <p class="inputALERT name" aria-live="assertive">⚠️️ Uh-oh, we can not read your mind just yet.</p>
-    <p class="inputALERT email" aria-live="assertive">⚠️️ Uh-oh, is your email might be on vacation.</p>
-    <p class="inputALERT password" aria-live="assertive">⚠️️ Uh-oh, your password is playing hide and seek.</p>
 </body>
     </html>
